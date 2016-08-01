@@ -23,3 +23,12 @@ stats.show()
 
 // COMMAND ----------
 
+val another_list = List((6,"six",1000))
+
+val another_rdd = sc.parallelize(another_list)
+
+val another_df = another_rdd.toDF()
+
+val combined = new_df.unionAll(another_df)
+
+// COMMAND ----------
